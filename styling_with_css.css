@@ -1,0 +1,53 @@
+*{
+    padding:10px;
+    margin:0;
+}
+
+
+section{  
+  margin: 20px 0;
+}
+
+ul{    
+  padding-left: 40px;
+}
+
+ul ul ul {
+  margin-top: 10px;
+}
+
+li:nth-child(1), li:nth-child(5) {
+  color: royalblue;
+}
+
+li:nth-child(2) {
+  color: forestgreen;
+}
+
+li:nth-child(3) {
+  color: crimson;
+}
+
+ul ul li:nth-child(1), ul ul li:nth-child(3) {
+  color: violet;
+  background-color: darkgray;
+  border-radius: 25px;
+}
+
+ul ul ul li:nth-child(1) {
+  color: darkorange;
+  background-color: beige;
+  border-radius: 25px;
+  font-size: 10px;
+}
+
+footer {
+  border: 4px red solid;
+  border-radius: 25px;
+  background-color: #ffe6e6;
+  text-align: center;
+  padding: 2px;
+  width: 250px;
+  height: 35px;
+  margin: 20px 0;
+}
