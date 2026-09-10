@@ -1,0 +1,23 @@
+HTML{
+    background-color: rosybrown;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(92, 53, 53);
+    font-size: 20px;
+    text-align: left;
+}
+
+p{
+    border: 2px black solid;
+    background-color: bisque;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: inset;
+}
+
+ul{
+    border: 2px black solid;
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: inset;
+}
