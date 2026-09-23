@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+    <style>
+        html{
+            background-color: orange;
+        }
+        #container{
+            display: flex;
+            height: 100vh;
+        }
+        #left{
+            border-right: 3px orange solid;
+            background: rgb(156, 90, 24);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            height: 100vh;
+            width: 200px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        #right{
+            overflow-y: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+        img{
+            height: 100px;
+            border: 2px solid orange;
+            flex-grow: 1;
+        }
+        #trash{
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <div id="left">
+        <p id="camera">&#x1F4F7</p>
+        <p id="cabinet">&#x1F5C4</p>
+        <p id="heart">&#x2764</p>
+        <p id="trash">&#x1F5D1</p>
+    </div>
+    <div id="right">
+        <img src="https://picsum.photos/233/100">
+        <img src="https://picsum.photos/245/100">
+        <img src="https://picsum.photos/135/100">
+        <img src="https://picsum.photos/356/100">
+        <img src="https://picsum.photos/357/100">
+        <img src="https://picsum.photos/325/100">
+        <img src="https://picsum.photos/256/100">
+        <img src="https://picsum.photos/355/100">
+        <img src="https://picsum.photos/213/100">
+        <img src="https://picsum.photos/234/100">
+        <img src="https://picsum.photos/247/100">
+        <img src="https://picsum.photos/238/100">
+        <img src="https://picsum.photos/258/100">
+        <img src="https://picsum.photos/134/100">
+        <img src="https://picsum.photos/244/100">
+        <img src="https://picsum.photos/137/100">
+        <img src="https://picsum.photos/123/100">
+        <img src="https://picsum.photos/145/100">
+        <img src="https://picsum.photos/215/100">
+        <img src="https://picsum.photos/201/100">
+        <img src="https://picsum.photos/233/100">
+        <img src="https://picsum.photos/245/100">
+        <img src="https://picsum.photos/135/100">
+        <img src="https://picsum.photos/356/100">
+        <img src="https://picsum.photos/357/100">
+        <img src="https://picsum.photos/325/100">
+        <img src="https://picsum.photos/256/100">
+        <img src="https://picsum.photos/355/100">
+        <img src="https://picsum.photos/213/100">
+        <img src="https://picsum.photos/234/100">
+        <img src="https://picsum.photos/247/100">
+        <img src="https://picsum.photos/238/100">
+        <img src="https://picsum.photos/258/100">
+        <img src="https://picsum.photos/134/100">
+        <img src="https://picsum.photos/244/100">
+        <img src="https://picsum.photos/137/100">
+        <img src="https://picsum.photos/123/100">
+        <img src="https://picsum.photos/145/100">
+        <img src="https://picsum.photos/215/100">
+        <img src="https://picsum.photos/201/100">
+        <img src="https://picsum.photos/233/100">
+        <img src="https://picsum.photos/245/100">
+        <img src="https://picsum.photos/135/100">
+        <img src="https://picsum.photos/356/100">
+        <img src="https://picsum.photos/357/100">
+        <img src="https://picsum.photos/325/100">
+        <img src="https://picsum.photos/256/100">
+        <img src="https://picsum.photos/355/100">
+        <img src="https://picsum.photos/213/100">
+        <img src="https://picsum.photos/234/100">
+        <img src="https://picsum.photos/247/100">
+        <img src="https://picsum.photos/238/100">
+        <img src="https://picsum.photos/258/100">
+        <img src="https://picsum.photos/134/100">
+        <img src="https://picsum.photos/244/100">
+        <img src="https://picsum.photos/137/100">
+        <img src="https://picsum.photos/123/100">
+        <img src="https://picsum.photos/145/100">
+        <img src="https://picsum.photos/215/100">
+        <img src="https://picsum.photos/201/100">
+        <img src="https://picsum.photos/233/100">
+        <img src="https://picsum.photos/245/100">
+        <img src="https://picsum.photos/135/100">
+        <img src="https://picsum.photos/356/100">
+        <img src="https://picsum.photos/357/100">
+        <img src="https://picsum.photos/325/100">
+        <img src="https://picsum.photos/256/100">
+        <img src="https://picsum.photos/355/100">
+        <img src="https://picsum.photos/213/100">
+        <img src="https://picsum.photos/234/100">
+        <img src="https://picsum.photos/247/100">
+        <img src="https://picsum.photos/238/100">
+        <img src="https://picsum.photos/258/100">
+        <img src="https://picsum.photos/134/100">
+        <img src="https://picsum.photos/244/100">
+        <img src="https://picsum.photos/137/100">
+        <img src="https://picsum.photos/123/100">
+        <img src="https://picsum.photos/145/100">
+        <img src="https://picsum.photos/215/100">
+        <img src="https://picsum.photos/201/100">
+        <img src="https://picsum.photos/233/100">
+        <img src="https://picsum.photos/245/100">
+        <img src="https://picsum.photos/135/100">
+        <img src="https://picsum.photos/356/100">
+        <img src="https://picsum.photos/357/100">
+        <img src="https://picsum.photos/325/100">
+        <img src="https://picsum.photos/256/100">
+        <img src="https://picsum.photos/355/100">
+        <img src="https://picsum.photos/213/100">
+        <img src="https://picsum.photos/234/100">
+        <img src="https://picsum.photos/247/100">
+        <img src="https://picsum.photos/238/100">
+        <img src="https://picsum.photos/258/100">
+        <img src="https://picsum.photos/134/100">
+        <img src="https://picsum.photos/244/100">
+        <img src="https://picsum.photos/137/100">
+        <img src="https://picsum.photos/123/100">
+        <img src="https://picsum.photos/145/100">
+        <img src="https://picsum.photos/215/100">
+        <img src="https://picsum.photos/201/100">
+    </div>
+   </div> 
+</body>
+</html>
