@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Assignment</title>
+    <style>
+        #button{
+            background-color: blue;
+            font-size: 1.3em;
+            color: black;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #button:hover{
+            cursor: pointer;
+        }
+        #outside{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Click me! 😊</button>
+    <div id="outside"></div>
+    <script>
+        const button = document.getElementById('button');
+        const outside = document.getElementById('outside');
+        
+        function hovered(event){
+            button.style.backgroundColor = 'yellow';
+            button.textContent = 'Do not click! 😠';
+        }
+        function clicked(event){
+            button.style.backgroundColor = 'red';
+            button.textContent = 'Ouch! 🤕';
+        }
+        function left(event){
+            button.style.backgroundColor = 'lightgreen';
+            button.textContent = 'Phew! 😌';
+        }
+        function doubleclicked(event){
+            button.style.backgroundColor = 'pink';
+            button.textContent = 'Double trouble! 🤩';
+        }
+        function moved(event){
+            button.style.backgroundColor = 'lightblue';
+            button.textContent = 'I see you! 👀';
+        }
+        
+
+        button.addEventListener('mouseover', hovered);
+        button.addEventListener('click', clicked);
+        button.addEventListener('mouseleave', left);
+        button.addEventListener('dblclick', doubleclicked);
+        outside.addEventListener('mouseover', moved);
+    </script>
+</body>
+</html>
