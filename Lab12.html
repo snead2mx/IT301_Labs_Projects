@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting and Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Greeting and Calculator</h1>
+    </header>
+    <h2>Greeting</h2>
+    <form action="#">
+        <label for="greet_name">What's your name?</label>
+        <input type="text" id="greet_name">
+        <button type="button" id="name_submit">Submit</button>
+    </form>
+    <p id="greet"></p>
+    <h2>Calculators</h2>
+    <form action="#">
+        <label for="n1">Value 1</label>
+        <input type="number" id="n1"><br>
+        <label for="n2">Value 2</label>
+        <input type="number" id="n2"><br>
+        <button type="button" id="value_submit">Submit</button>
+    </form>
+    <p id="values"></p>
+    <form action="#">
+        <label for="result">How do you want to calculate?</label><br>
+        <input type="radio" id="addition" name="calc">Addition<br>
+        <input type="radio" id="subtraction" name="calc">Subtaction<br>
+        <input type="radio" id="multiplication" name="calc">Multiplication<br>
+        <input type="radio" id="division" name="calc">Division<br>
+        <button type="button" id="calculator_submit">Submit</button>
+        <button type="button" id="clear">Clear</button>
+    </form>
+    <p id="result"></p>
+    <script src="Lab12.js"></script>
+</body>
+</html>
