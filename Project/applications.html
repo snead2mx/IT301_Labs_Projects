@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Applications</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/sharedcolors.css">
+    <link rel="stylesheet" href="css/applications.css">
+</head>
+<body>
+    <header>
+        <h1>LIBRARY APPLICATIONS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="applications.html">Library Applications</a></li>
+                <li><a href="cdrip.html">CD ripping</a></li>
+                <li><a href="metadata.html">Metadata Applications</a></li>
+                <li><a href="extras.html">Extra Goodies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>What did I want?</h2>
+        <section>
+            <p>I did not want to have players with as minimum features as possible. I felt that being limited to just having a player and a few playlist options were not enough. Although I had a small library when I started looking for players, being able to search and queue songs in specific ways such as at the end of a queue or right afterwards a certain song were invaluable to me.</p>
+            <p>Right off the bat, I was recommended a program that gave me everything I wanted in a music player. The problem was that it was Windows only, and even with the <a href="https://www.winehq.org/">WINE</a> tool, it was not entirely functional. Most of the programs listed below have a common availability on Linux because I was looking for programs similar in function and appearance to my preferred Windows program, so that I can have a fully functional Linux music player to use when I don't feel like using WINE.</p>
+        </section>
+        <h2>Programs I had tried</h2>
+        <section id="wrapper">
+            <article class="infocard">
+                <article class="infoleft">
+                     <h3>MusicBee <span id="windows">Windows</span></h3>
+                     <img src="images/musicbee.png" alt="App icon for MusicBee, which is a black and yellow bee with a music note at its stinger">
+                </article>
+                <article class="inforight">
+                    <img src="images/musicbee_sc.png" alt="Screenshot of a dark blue themed MusicBee, with an album artist sidebar on the left side, a queue sidebar on the right, and an album list in the main area.">
+                    <p>This had what I had hypothetically wanted with a local music player, with many customization and data tagging features. It is very easy to change information of groups of songs or albums by Control clicking tracks in your library and changing fields like artists and albums. You can also convert audio types, possibly rip CD's, syncing music to a phone, etc./p>
+                    <p>This program's queuing system is what I've liked the most out of all the music programs here. There is a dedicated next context menu that allows me to stack a bunch of queued tracks to play next, without it getting scrambled. There is also a queue last option, so if I want to add more songs at the end of the playlist, it remains at the end.</p>
+                    <p>Most customization is built into the player, with draggable panels and dropdown menus that can hide certain features from the user interface. There are a lot of themes you can switch into, and those themes will instantly take effect. It can change button and panel appearance. The theme used in the image is Midnight.</p>
+                    <p>Even with its amount of features, you can get more features and themes into the player using <a href="https://getmusicbee.com/addons/">community add-ons.</a></p>
+                    <p>This program is Windows only, so I had to once again use WINE to run it. In order to have it run, you have to load these components within WINE: cjkfonts, dotnet48, xmllite, and gdiplus.</p>
+                    <p>You'd also need to find a Bass_aac.dll file so that certain file types could load, and lib32-gnutls for some internet connections to work smoothly. This component will vary by operating system.</p>
+                    <p>Unfortunately some features I use daily such as syncing needs further configuration from WINE I had not figured out yet. For the syncing example, WINE on its own cannot detect plugged in devices such as phones and CD drives. Performance is also not the best.</p>
+                    <a href="https://getmusicbee.com/">Visit Website</a>
+                </article>
+            </article>
+            <article class="infocard">
+                <article class="infoleft">
+                    <h3> Strawberry <span id="linux">Linux</span></h3>
+                    <img src="images/strawberry.png" alt="App icon for Strawberry, which is just a plain old strawberry!">
+                </article>
+                <article class="inforight">
+                    <img src="images/strawberry_sc.png" alt="">
+                    <p>Strawberry is likely the closest I've gotten to the features in a native Linux program I've wanted. The user interface is less customizable though. Queuing songs depends on clicking groups of songs in a single panel library which is very nice to use for me.</p>
+                    <p>If I tried to do something similar in MusicBee, it would have me just play the song I selected instead. Even if there are no features related to CD ripping, the program makes up for with a lot of built in connections such as radios, logins to streaming services like Spotify and Tidal, and even logins to virtual library servers. I've been trying to also set up a virtual library recently, so I might find more use of this feature in the future.</p>
+                    <p>Do note that you'd need a subscription to use this app outside of Linux environments.</p>
+                    <a href="https://www.strawberrymusicplayer.org/">Visit Website</a>
+                </article>
+            </article>
+            <article class="infocard">
+                <article class="infoleft">
+                    <h3>Tauon Music Player <span class="both">Both</span></h3>
+                    <img src="images/tauon.png" alt="App icon for Tauon, which is a multicolored disk">
+                </article>
+                <article class="inforight">
+                    <img src="https://tauonmusicbox.rocks/_astro/cgal.Ghj_oXwz_IqToe.webp" alt="Screenshot of a gold and black themed Tauon, where there is a playlist sidebar, album chart main area, and media bar.">
+                    <caption>(This image was taken from the Tauon front page)</caption>
+                    <p>It has been a while since I had used this program, but this offers similar user interface customization and tag editing to MusicBee internally.</p>
+                    <p>The main thing that had prevented me from using this because of the features and actual cross=platform support, was that it was signficantly laggier and resource extensive than both programs.</p>
+                    <a href="https://tauonmusicbox.rocks/">Visit Website</a>
+                </article>
+            </article>
+            <article class="infocard">
+                <article class="infoleft">
+                    <h3>VLC Media Player <span class="both">Both</span></h3>
+                    <img src="images/vlc.png" alt="App icon for VLC, which is a typical orange and white traffic cone">
+                </article>
+                <article class="inforight">
+                    <p>This will not have its own photo because of how widely used the program is.</p>
+                    <p>It is actually possible to play a music library in VLC, but I unfortunately ran into some pet peeves: shuffling is really weird. When playing all music in my Music folder, it appears to only queue a few certain folders, which is really bad if you have a big library with many subfolders. Apparently the main solution is  to select all contents of each folder and create your own library file out of it. Based on the size of my library and how each track is nested in an artist and then album subfolder, this would unfortunately take a while.</p>
+                    <p>Either way, I prefer using this player to open files on their own, not to play multiple songs in a queue. Some takeaways about this program as a library organizer though, is that you can still rip contents of a CD or DVD, and there are some connection based options to open files outside of the library if needed such as network stream. This also has the least amount of metadata editing features.</p>
+                    <a href="https://www.videolan.org/vlc/">Visit Website</a>
+                </article>
+            </article>
+        </section>
+    </main>
+    <footer>
+        2026 - snead2mx
+    </footer>
+</body>
+</html>
