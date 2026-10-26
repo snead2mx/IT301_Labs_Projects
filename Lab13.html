@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 13</title>
+</head>
+<body>
+    <h1>Random Person Generator</h1>
+    <script>
+        let name = document.createElement('p');
+        let email = document.createElement('p');
+        let phone = document.createElement('p');
+        let img = document.createElement('img');
+        
+        let bttn = document.createElement('button');
+        bttn.type = 'button';
+        bttn.textContent = 'Who am I?';
+        let form = document.createElement('form');
+        form.action = '#';
+        form.appendChild(bttn);
+        document.body.appendChild(form);
+
+        const createPerson = async()=>{
+            let p2 = await fetch('https://randomuser.me/api/');
+            p2 = await p2.json();
+            person = p2['results'][0];
+            name.textContent = `${person['name'].first} ${person['name'].last}`;
+            email.textContent = `Email: ${person['email']}`;
+            phone.textContent = `Phone: ${person['phone']}`;
+            personimg = person['picture'].medium;
+            img.src = personimg;
+            img.alt = 'Person image';
+            document.body.appendChild(name);
+            document.body.appendChild(email);
+            document.body.appendChild(phone);
+            document.body.appendChild(img);
+        }
+        createPerson();
+        bttn.addEventListener('click', createPerson);
+    </script>
+</body>
+</html>
