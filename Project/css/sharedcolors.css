@@ -1,0 +1,38 @@
+html{
+    background-color: rgb(51, 65, 86);
+    color: white;
+}
+nav > ul > li{
+    background-color: rgb(20, 18, 39);
+}
+footer{
+    color: gold;
+    background-color: black;
+}
+a{
+    color: hotpink;
+}
+a:hover{
+    color: gold;
+}
+section {
+    background-color: rgb(41, 37, 57);
+}
+h3{
+    color: gold;
+}
+.infoleft span{
+    background-color: black;
+}
+#windows{
+    color: cyan;
+}
+#linux{
+    color: limegreen;
+}
+.both{
+    color: fuchsia;
+}
+.inforight {
+    background-color: black;
+}
