@@ -92,7 +92,9 @@
                     task2_idArray.push({posttitle:element.title, postbody:element.body, postid:element.id, userid:element.userId});
                 });
                 console.log(task2_idArray);
-
+                document.body.appendChild(task2);
+                task2_content.textContent = `lalalalallaa`;
+                document.body.appendChild(task2_content);
                 
             } catch (error) {
                 console.log(error);
