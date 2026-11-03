@@ -89,7 +89,7 @@
                 let task2_content = document.createElement('p');
                 let task2_idArray = [];
                 post_array.forEach(element => {
-                    task2_idArray.push({userId:element.userId, postId:element.id});
+                    task2_idArray.push({posttitle:element.title, postbody:element.body, postid:element.id, userid:element.userId});
                 });
                 console.log(task2_idArray);
 
