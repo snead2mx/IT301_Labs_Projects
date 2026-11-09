@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <style>
+        .rule{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" required><br>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" required><br>
+        <label for="pw">Create a password:</label>
+        <input type="password" id="pw" required><br>
+        <button id="formsubmit">Submit</button>
+    </form>
+    <div class="rules" id="password-rules">
+        <div id="rule-length" class="rule">✖ At least 6 characters</div>
+        <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
+        <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
+    </div>
+    <script>
+        const formsubmit = document.getElementById('formsubmit');
+        formsubmit.addEventListener('submit', ()=>{
+            event.preventDefault();
+        })
+        
+        const pw = document.getElementById('pw');
+        const rule_length = document.getElementById('rule-length');
+        const pw_length = pw.length >= 6;
+        const pw_special = /[!@#$%^&*(),.?":{}|<>]/.test(pw);
+        const pw_uppercase = /[A-Z]/.test(pw);
+        pw.addEventListener('submit', ()=>{
+            rule_length.classList.toggle('rule', !pw_length);
+        })
+
+    </script>
+</body>
+</html>
