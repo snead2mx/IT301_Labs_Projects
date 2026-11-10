@@ -7,7 +7,13 @@
     <style>
         .rule{
             display: none;
+        }
+        .invalid{
+            display: contents;
             color: red;
+        }
+        .valid{
+            display: none;
         }
     </style>
 </head>
@@ -19,13 +25,13 @@
         <input type="email" id="email" required><br>
         <label for="pw">Create a password:</label>
         <input type="password" id="pw" required><br>
+        <div class="rules" id="password-rules">
+            <div id="rule-length" class="rule">✖ At least 6 characters<br></div>
+            <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)<br></div>
+            <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)<br></div>
+        </div>
         <button id="formsubmit">Submit</button>
     </form>
-    <div class="rules" id="password-rules">
-        <div id="rule-length" class="rule">✖ At least 6 characters</div>
-        <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
-        <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
-    </div>
     <script>
         const formsubmit = document.getElementById('formsubmit');
         formsubmit.addEventListener('submit', ()=>{
@@ -33,14 +39,24 @@
         })
         
         const pw = document.getElementById('pw');
-        const rule_length = document.getElementById('rule-length');
-        const pw_length = pw.length >= 6;
-        const pw_special = /[!@#$%^&*(),.?":{}|<>]/.test(pw);
-        const pw_uppercase = /[A-Z]/.test(pw);
-        pw.addEventListener('submit', ()=>{
-            rule_length.classList.toggle('rule', !pw_length);
-        })
+        pw.addEventListener('input', ()=>{
+            const typed_pw = pw.value;
+            const rule_length = document.getElementById('rule-length');
+            const rule_special = document.getElementById('rule-special');
+            const rule_upper = document.getElementById('rule-uppercase');
+            const pw_length = typed_pw.length >= 6;
+            const pw_special = /[!@#$%^&*(),.?":{}|<>]/.test(typed_pw);
+            const pw_uppercase = /[A-Z]/.test(typed_pw);
 
+            rule_length.classList.toggle('invalid', !pw_length);
+            rule_length.classList.toggle('valid', pw_length);
+            
+            rule_special.classList.toggle('invalid', !pw_special);
+            rule_special.classList.toggle('valid', pw_special);
+
+            rule_upper.classList.toggle('invalid', !pw_uppercase);
+            rule_upper.classList.toggle('valid', pw_uppercase);
+        });
     </script>
 </body>
 </html>
