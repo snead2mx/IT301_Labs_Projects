@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br><br>
+        <label for="pw">Password:</label>
+        <input type="password" id="pw">
+        <br><br>
+        <!-- Adding type button on the button prevents submission to itself -->
+        <button type="button" id="log">Sign in</button>
+    </form>
+    <p id="message"></p>
+    <!-- Connects to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <!-- Accesses the database -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <!-- Handles user login -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyAOw0QtuN6qhdO0DKCVIMsL5Ox5UQ7k7DQ",
+
+            authDomain: "studentdatabase-ccdb8.firebaseapp.com",
+
+            projectId: "studentdatabase-ccdb8",
+
+            storageBucket: "studentdatabase-ccdb8.firebasestorage.app",
+
+            messagingSenderId: "659014834433",
+
+            appId: "1:659014834433:web:22866be59eb0d7e8606300"
+
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        // This is just an object to store info about the database, no await needed
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+        //read email
+        const email = document.getElementById('email');
+        const pw = document.getElementById('pw');
+        const log = document.getElementById('log');
+        const message = document.getElementById('message');
+
+        log.addEventListener('click', async () => {
+            try {
+                const cred = await auth.signInWithEmailAndPassword(
+                    emailInput.value.trim(), passwordInput.value);
+                const uid = cred.user.uid;
+                const userDoc = await db.collection("users").doc(uid).get();
+                const role = userDoc.data().role;
+                if (role === "faculty") {
+                    window.location.href = "Lab17.html";
+                } else {
+                    window.location.href = "student.html";
+                }
+            } catch (error) {
+                message.textContent = "Login failed. Check your details.";
+            }
+        });
+    </script>
+</body>
+
+</html>
